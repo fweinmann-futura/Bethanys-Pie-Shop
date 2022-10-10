@@ -48,7 +48,7 @@ string result = builder.ToString();
 
 StringBuilder builder2 = new StringBuilder();
 
-for (int i = 0; i < 2500; i++)
+for (int i = 0; i < 1000;i++)
 {
     builder2.Append(i);
     builder2.Append(" ");
