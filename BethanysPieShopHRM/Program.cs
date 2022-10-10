@@ -14,46 +14,50 @@ Console.WriteLine("--------------------\n");
 
 Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.de", new DateTime(1979, 1, 16), 25);
 
+
+string bethanyAsJson = bethany.ConvertToJson();
+Console.WriteLine(bethanyAsJson);
+
 //bethany.PerformWork(25);
 
-string name = "bethany";
-string anotherName = name;
-name += " smith";
+//string name = "bethany";
+//string anotherName = name;
+//name += " smith";
 
-Console.WriteLine("Name: " + name);
-Console.WriteLine("Another name: " + anotherName);
+//Console.WriteLine("Name: " + name);
+//Console.WriteLine("Another name: " + anotherName);
 
-string upperCaseName = name.ToUpper();
+//string upperCaseName = name.ToUpper();
 
-Console.WriteLine("Name: " + name);
-Console.WriteLine("Uppercase name: " + upperCaseName);
+//Console.WriteLine("Name: " + name);
+//Console.WriteLine("Uppercase name: " + upperCaseName);
 
-string indexes = string.Empty;
+//string indexes = string.Empty;
 
-for (int i= 0; i <2500; i++)
-{
-    indexes += indexes.ToString();
-}
+//for (int i= 0; i <2500; i++)
+//{
+//    indexes += indexes.ToString();
+//}
 
-string firstName = "Bethany";
-string lastName = "Smith";
+//string firstName = "Bethany";
+//string lastName = "Smith";
 
-StringBuilder builder = new StringBuilder();
+//StringBuilder builder = new StringBuilder();
 
-builder.Append("Last name: ");
-builder.AppendLine(lastName);
-builder.Append("First name: ");
-builder.Append(firstName);
-string result = builder.ToString();
+//builder.Append("Last name: ");
+//builder.AppendLine(lastName);
+//builder.Append("First name: ");
+//builder.Append(firstName);
+//string result = builder.ToString();
 
-StringBuilder builder2 = new StringBuilder();
+//StringBuilder builder2 = new StringBuilder();
 
-for (int i = 0; i < 1000;i++)
-{
-    builder2.Append(i);
-    builder2.Append(" ");
-}
-string list = builder2.ToString();
+//for (int i = 0; i < 1000;i++)
+//{
+//    builder2.Append(i);
+//    builder2.Append(" ");
+//}
+//string list = builder2.ToString();
 
 //int minimumBonus = 100;
 //int receivedBonus = bethany.CalculateBonus(minimumBonus);
