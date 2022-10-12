@@ -1,6 +1,4 @@
-﻿
-
-using BethanysPieShopHRM;
+﻿using BethanysPieShopHRM.HR;
 using System.Text;
 
 //int a = 42;
@@ -14,30 +12,59 @@ Console.WriteLine("--------------------\n");
 
 Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.de", new DateTime(1979, 1, 16), 25, Employeetype.Manager);
 
-Employee george = new("George", "Jones", "george@snowball.de", new DateTime (1984, 3, 28), 30, Employeetype.Research);
+Console.WriteLine("Creating an employee");
+Console.WriteLine("--------------------\n");
 
-bethany.DisplayEmployeeDetails();
-bethany.PerformWork();
+Employee george = new("George", "Jones", "george@snowball.de", new DateTime (1984, 3, 28), null, Employeetype.Research);
+
+Employee mysteryEmployee = null;
+mysteryEmployee.DisplayEmployeeDetails();
+
+#region First run Bethany
+
 bethany.PerformWork();
 bethany.PerformWork(5);
 bethany.PerformWork();
+bethany.ReceiveWage();
+bethany.DisplayEmployeeDetails();
 
-double receivedWageBethany = bethany.ReceiveWage(true);
-Console.WriteLine($"Wage paid (message from Program): {receivedWageBethany}");
+#endregion
 
+#region First run George
+
+george.PerformWork(10);
+george.PerformWork();
+george.PerformWork();
+george.ReceiveWage();
 george.DisplayEmployeeDetails();
-george.PerformWork();
-george.PerformWork();
-george.PerformWork(3);
-george.PerformWork();
-george.PerformWork(8);
 
-var receivedWageGeorge = george.ReceiveWage(true);
+#endregion
 
-WorkTask task;
-task.description = "Bake delicious pies";
-task.hours = 3;
-task.PerformWorkTask();
+Employee.taxRate = 0.02;
+
+#region Second run Bethany
+
+bethany.PerformWork();
+bethany.PerformWork(5);
+bethany.PerformWork();
+bethany.ReceiveWage();
+bethany.DisplayEmployeeDetails();
+
+#endregion
+
+#region Second run George
+
+george.PerformWork(10);
+george.PerformWork();
+george.PerformWork();
+george.ReceiveWage();
+george.DisplayEmployeeDetails();
+
+#endregion
+
+
+Employee.DisplayTaxRate();
+
 
 
 //string bethanyAsJson = bethany.ConvertToJson();
@@ -76,6 +103,7 @@ task.PerformWorkTask();
 //string result = builder.ToString();
 
 //StringBuilder builder2 = new StringBuilder();
+
 
 //for (int i = 0; i < 1000;i++)
 //{
