@@ -11,4 +11,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="BethanysPieShopHRM.Logic">
+      <HintPath>..\..\C#basics\c-sharp-10-fundamentals\Assets\m9\BethanysPieShopHRM.Logic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
